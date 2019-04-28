@@ -1,0 +1,14 @@
+version: '3.0'
+services:
+ app:
+   build: .
+   ports:
+     - "80:80"
+     - "8080:8080"
+     - "9000:9000"
+   volumes:
+     - "data:/application_1/public"
+   tty: true
+   stdin_open: true 
+volumes:
+  data:
